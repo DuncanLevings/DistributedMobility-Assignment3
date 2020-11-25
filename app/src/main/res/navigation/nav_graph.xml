@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dataFragment">
+
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="sheridan.levings.assignment3.ui.DataFragment"
+        android:label="@string/fragment_data_label"
+        tools:layout="@layout/fragment_data">
+        <action
+            android:id="@+id/action_showDataDetails"
+            app:destination="@id/dataDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataDetailsFragment"
+        android:name="sheridan.levings.assignment3.detail.DataDetailsFragment"
+        android:label="@string/fragment_data_details_label"
+        tools:layout="@layout/fragment_data_details">
+        <argument
+            android:name="selectedProperty"
+            app:argType="sheridan.levings.assignment3.domain.Flower"
+            />
+    </fragment>
+</navigation>
