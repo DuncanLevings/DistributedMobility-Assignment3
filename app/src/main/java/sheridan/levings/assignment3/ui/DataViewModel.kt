@@ -29,7 +29,6 @@ class DataViewModel : ViewModel() {
     }
 
     fun displayFlowerDetails(flower: Flower) {
-        println(flower)
         _navigateToSelectedProperty.value = flower
     }
 
